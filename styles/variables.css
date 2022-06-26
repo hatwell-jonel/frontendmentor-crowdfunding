@@ -1,0 +1,13 @@
+:root {
+  --scr-min-width: 300px;
+  --scr-max-width: 700px;
+
+  --clr-primary: hsl(176, 50%, 47%);
+  --clr-primary-darker: hsl(176, 72%, 28%);
+  --clr-black-100: hwb(0 0% 100%);
+  --clr-black-50: hsl(0, 0%, 50%);
+  --clr-white-100: hsl(0, 0%, 100%);
+  --clr-white-50: hsl(0, 0%, 50%);
+
+  --font-family: Arial, Helvetica, sans-serif;
+}

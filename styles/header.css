@@ -1,0 +1,111 @@
+.header {
+  height: 250px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(./../images/image-hero-mobile.jpg) center/cover no-repeat;
+}
+
+.header .container {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+.btn__menu {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.open {
+  background: url(./../images/icon-hamburger.svg) no-repeat center/cover;
+}
+
+.close {
+  background: url(./../images/icon-close-menu.svg) no-repeat center/cover;
+}
+
+.btn__menu:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+}
+
+.nav__list {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  background-color: var(--clr-white-100);
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+  border-radius: 12px;
+}
+
+.nav__item a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--clr-black-100);
+  padding: 1rem;
+  display: block;
+  border-bottom: 1px solid var(--clr-black-50);
+}
+
+@media screen and (min-width: 650px) {
+  .header {
+    height: 350px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(./../images/image-hero-desktop.jpg) center/cover no-repeat;
+  }
+
+  .nav {
+    padding: 0.5rem;
+  }
+
+  .btn__menu {
+    display: none;
+  }
+
+  .nav__list {
+    position: relative;
+    background-color: transparent;
+    display: flex !important;
+    z-index: 0;
+
+    width: initial;
+    left: initial;
+    transform: initial;
+    top: initial;
+    border-radius: initial;
+  }
+
+  .nav__list a {
+    position: relative;
+    border: none;
+    color: var(--clr-white-100);
+  }
+
+  .nav__list a:hover::before {
+    content: "";
+    transform: 0.3s ease;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background-color: var(--clr-white-100);
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

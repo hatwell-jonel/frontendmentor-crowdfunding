@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <title>Frontend Mentor | Crowdfunding product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="" title="Crowdfunding">
+            <img src="./images/logo.svg" alt="logo" />
+          </a>
+
+          <button
+            type="button"
+            class="btn__menu open"
+            title="menu"
+            tabindex="0"
+          ></button>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" title="about">about</a>
+            </li>
+            <li class="nav__item">
+              <a href="" title="discover">discover</a>
+            </li>
+            <li class="nav__item">
+              <a href="" title="get started">get started</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <article class="box intro">
+          <img
+            src="./images/logo-mastercraft.svg"
+            class="icon__mastercraft"
+            alt="Mastercraft"
+          />
+
+          <h1 class="intro__title">Mastercraft Bamboo Monitor Riser</h1>
+          <p class="intro__subtitle">
+            A beautiful & handcrafted monitor stand to reduce neck and eye
+            strain.
+          </p>
+
+          <div class="intro__buttons">
+            <button type="button" class="btn__back-project">
+              Back this project
+            </button>
+
+            <button type="button" class="btn__bookmark">
+              <svg width="56" height="56" class="btn__bookmark-icon">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                  <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                </g>
+              </svg>
+              <span class="btn__bookmark-text">Bookmark</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="box datas">
+          <div class="data__container">
+            <!-- <div class="data_box data__backed">
+              <p class="data__number">$12345</p>
+              <p class="data__def">of $100,000 backed</p>
+            </div>
+
+            <div class="data_box data__backers">
+              <p class="data__number">5,0003</p>
+              <p class="data__def">total backers</p>
+            </div>
+
+            <div class="data_box data__daysleft">
+              <p class="data__number">50</p>
+              <p class="data__def">days left</p>
+            </div> -->
+          </div>
+
+          <progress id="progressbar" value="50000" max="100000"></progress>
+        </article>
+        <article class="box about">
+          <h2 class="about__title">About this project</h2>
+
+          <section class="about__detail">
+            <br />
+            <p>
+              The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+              platform that elevates your screen to a more comfortable viewing
+              height. Placing your monitor at eye level has the potential to
+              improve your posture and make you more comfortable while at work,
+              helping you stay focused on the task at hand.
+            </p>
+            <br />
+            <p>
+              Featuring artisan craftsmanship, the simplicity of design creates
+              extra desk space below your computer to allow notepads, pens, and
+              USB sticks to be stored under the stand.
+            </p>
+          </section>
+
+          <section class="about__pledges">
+            <!-- <div class="pledge">
+              <div class="pledge--flex">
+                <p class="pledge__text">bamboo stand</p>
+                <p class="pledge__amount">Pledge $123 or more</p>
+              </div>
+    
+              <p class="pledge__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos unde consectetur repellendus facilis minima obcaecati explicabo recusandae nesciunt facere temporibus.</p>
+    
+              <div class="pledge--flex">
+                <p class="pledge__itemLeft"> <span>123</span> left </p>
+                <button class="btn__selectreward">select reward</button>
+              </div>
+            </div> -->
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <div class="modal modal--hidden" id="modal-pledges">
+      <form class="modal__box">
+        <div class="modal__header modal__header--flex">
+          <h2 class="modal__title">back this project</h2>
+          <button
+            class="modal__button modal__button--close"
+            type="button"
+            title="close modal"
+          >
+            <img
+              src="./images/icon-close-modal.svg"
+              alt="close modal"
+              title="close modal"
+            />
+          </button>
+        </div>
+        <p class="modal__paragraph">
+          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+          the world?
+        </p>
+        <!--  -->
+        <div class="modal__content">
+          <div class="pledge">
+            <div class="pledge__header">
+              <div class="circle__container">
+                <div class="button__circle" data-id="0"></div>
+              </div>
+              <div class="flex">
+                <h2 class="pledge__text">Pledge with no rewards</h2>
+                <!-- <p class="pledge__amount">Plege $123 or more</p> -->
+              </div>
+            </div>
+
+            <div class="pledge__body">
+              <p class="pledge__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                vero tempore, accusamus omnis repellat doloremque qui corrupti
+                nobis dolorem at!
+              </p>
+              <!-- <p class="pledge__itemLeft"><span>30</span> left</p> -->
+            </div>
+
+            <div class="pledge__footer pledge__footer--hidden">
+              <p class="text__enter-pledge">Enter your pledge</p>
+
+              <div class="pledge__input">
+                <div class="input__group">
+                  <input type="text" class="input_amount" />
+                  <p>$</p>
+                </div>
+                <button type="submit">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script defer src="./script/jquery.js"></script>
+    <script type="module" defer src="./script/script.js"></script>
+  </body>
+</html>
+
+<!-- 
+   <div class="modal">
+      <div class="modal__content">
+        <div class="modal__content__intro">
+          <div class="">
+            <h2>back this project</h2>
+            <button class="close_modal">
+              <img
+                src="./images/icon-close-modal.svg"
+                alt="close modal"
+                title="close modal"
+              />
+            </button>
+          </div>
+
+          <p>
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
+            in the world?
+          </p>
+        </div>
+
+        <form class="modal__content__pledges">
+          <div class="pledge pledge_modal">
+            <div class="">
+              <div class="circle"></div>
+              <div class="">
+                <p class="pledge__text">Pledge with no reward</p>
+              </div>
+            </div>
+            <p class="pledge__desc">
+              Choose to support us without a reward if you simply believe in our
+              project. As a backer, you will be signed up to receive product
+              updates via email.
+            </p>
+            <div class="pledge_modal_enter_amount">
+              <p>Enter your pledge</p>
+              <div class="inputs">
+                <input type="text" class="input_amount" />
+                <button type="submit">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pledge_with_reward"></div>
+        </form>
+      </div>
+    </div>
+
+ -->
